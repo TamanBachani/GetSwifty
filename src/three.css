@@ -1,0 +1,234 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+    background-color: rgba(0, 0, 0, 0.986);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #ffcd69;
+    border-radius: 8px;
+}
+
+::selection{
+    background-color:rgba( 237	202	133 / 0.8);
+
+}
+main > p{
+    font-family: 'Crimson Pro', serif;
+    padding: 1em 3em 0 3em;
+    text-align: justify;
+    font-size: 1.3rem;
+    margin-top: 0;
+    line-height: 2rem;
+}
+
+
+.first{
+    padding-top: 2em;
+    margin-top: 1em;
+}
+
+@font-face {
+    font-family: Cirka;
+    font-weight: bold;
+    src: url("./cirka-bold.otf") format("opentype");
+}
+
+section{
+    padding: 15em 7em 5em 7em;
+    background-image:url('../src/taylor.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -2;
+}
+
+.taylor-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(ellipse at bottom, rgba( 0 0 0 / 0.7), rgba(0 0 0 / 0.5), rgba( 237	202	133 / 0.3));
+    z-index: -1;
+}
+
+
+.taylor-text{
+    font-family: 'Cirka', serif;
+}
+
+h1{
+    margin: 0;
+    font-size: 6.5rem;
+    letter-spacing: 5px;
+    background: linear-gradient(
+-90deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h3{
+    padding-left: 0.2em;
+    margin-top: 0.3rem;
+    font-size: 2rem;
+    opacity: 0.9;
+    line-height: 1.5em;
+    color: #a0e9ff;
+}
+
+
+.gen-text{
+    font-size: 2rem;
+    display: inline-block;
+    font-family: 'Cirka';
+    margin: 0;
+    padding: 0 1em;
+    line-height: 1.5em;
+    letter-spacing: 2px;
+}
+
+.generate{
+    padding: 2em 5em 0 5em;
+    text-align: center;
+}
+
+.gen-button{
+    display: block;
+    margin:  1.5rem auto 0 auto;
+    border: none;
+    padding: 0.75rem 2.75rem;
+    font-family: 'Cirka';
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 3px;
+    background-image: linear-gradient(-45deg, #a0e9ff, #a162e8, #f093b0, #edca85);
+    background-size: 150%;
+    color: black;
+    background-position: left;
+    transition: background-position 300ms ease-out, transform 300ms ease-in;
+}
+.gen-button:hover{
+    background-position: right; 
+    transform: scale(1.05);
+}
+
+#paras-number{
+    height: 2rem;
+    font-size: 2rem;
+    width: 4em;
+    font-family: 'Cirka';
+    text-align: center;
+    padding-left: 0.5em;
+    border: 1px solid #63125f;
+    color: #2b0a52;
+    padding-bottom: 6px;
+    letter-spacing: 5px;
+}
+
+#paras-number::-webkit-input-placeholder {
+     color: black; /*Change the placeholder color*/
+     opacity: 0.2; /*Change the opacity between 0 and 1*/
+}
+
+.footer{
+    color: white;
+    font-family: 'Cirka';
+    letter-spacing: 2px;
+    font-size: 1rem;
+    margin-top: 3em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    background: linear-gradient(to left, #4a8da1, #6f3da8, #a84665, #977736); 
+    background-size: 600%;
+    animation: 10s infinite alternate footer-animate;
+}
+
+@keyframes footer-animate {
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+
+.footer > a{
+    text-decoration: none;
+    color: white;
+    margin-right: 0.5rem;
+    position: relative;
+    padding-bottom: 1px;
+}
+
+.footer > a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3%;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: transform 0.4s ease-in;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.footer > a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+    cursor: pointer;
+
+}
+
+.fas{
+    padding-right: 4px;
+    font-size: 0.75em;
+}
+
+
+@media (max-width: 750px) {
+    h1{
+        font-size: 4rem
+    }
+    section{
+        padding: 3em 1em 3em 1em;
+        text-align: center;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    main > p{
+        padding: 0em 1em 1em 1em;
+    }
+    .first{
+        padding-top: 1em;
+    }
+    .gen-button{
+        transform: scale(0.8);
+        padding: 0.75rem 1rem;
+    }
+    .gen-button:hover{
+        transform: scale(0.8);
+    }
+    .gen-text{
+        line-height: 3rem;
+    }
+}
