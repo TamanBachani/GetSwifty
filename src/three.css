@@ -1,5 +1,7 @@
 html{
     scroll-behavior: smooth;
+    position: relative;
+    min-height: 100vh;
 }
 
 body{
@@ -25,19 +27,21 @@ html::-webkit-scrollbar-thumb {
     background-color:rgba( 237	202	133 / 0.8);
 
 }
+
+.empty{
+    font-family: 'Cirka';
+    opacity: 0.4;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
 main > p{
     font-family: 'Crimson Pro', serif;
-    padding: 1em 3em 0 3em;
+    padding: 0 3em 1em 3em;
     text-align: justify;
     font-size: 1.3rem;
     margin-top: 0;
     line-height: 2rem;
-}
-
-
-.first{
-    padding-top: 2em;
-    margin-top: 1em;
 }
 
 @font-face {
@@ -61,10 +65,9 @@ section{
     left: 0;
     height: 100%;
     width: 100%;
-    background: radial-gradient(ellipse at bottom, rgba( 0 0 0 / 0.7), rgba(0 0 0 / 0.5), rgba( 237	202	133 / 0.3));
+    background: radial-gradient(ellipse at bottom, rgba( 0 0 0 / 0.7), rgba(0 0 0 / 0.6), rgba( 	240	147	176 / 0.3));
     z-index: -1;
 }
-
 
 .taylor-text{
     font-family: 'Cirka', serif;
@@ -89,7 +92,6 @@ h3{
     line-height: 1.5em;
     color: #a0e9ff;
 }
-
 
 .gen-text{
     font-size: 2rem;
@@ -146,6 +148,9 @@ h3{
 }
 
 .footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     color: white;
     font-family: 'Cirka';
     letter-spacing: 2px;
@@ -222,6 +227,7 @@ h3{
         padding-top: 1em;
     }
     .gen-button{
+        margin-top: 0;
         transform: scale(0.8);
         padding: 0.75rem 1rem;
     }
@@ -230,5 +236,6 @@ h3{
     }
     .gen-text{
         line-height: 3rem;
+        font-size: 1.5rem;
     }
 }

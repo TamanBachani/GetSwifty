@@ -3,7 +3,7 @@ import React from 'react'
 const Hero = () => {
     return (
                     <section className='taylor-hero'>
-                    <div class="taylor-img">
+                    <div className="taylor-img">
                     </div>
                     <div className='taylor-text'>
                     <h1>Get <span>Swifty</span></h1>
